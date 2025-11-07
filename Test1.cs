@@ -133,7 +133,6 @@ namespace Proyecto_Auto
             {
                 driver.Quit();
                 driver.Dispose();
-                driver = null;
             }
         }
     }
