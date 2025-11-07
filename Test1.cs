@@ -38,7 +38,7 @@ namespace Proyecto_Auto
             Assert.That(driver.FindElement(By.CssSelector("p[class='has-text-align-center'] strong")).Displayed, Is.True);
         }
 
-        // Practica: crear dos test de login erroneo ----------------------------------------------------
+        // Practica: crear dos test de login erroneo ----------------------------------------------------|
 
         [Test]
         public void loginErroneoPass()
@@ -61,7 +61,7 @@ namespace Proyecto_Auto
             Thread.Sleep(2000);
             Assert.That(driver.FindElement(By.CssSelector("#error")).Displayed, Is.True);
         }
-        // Fin practica --------------------------------------------------------------------------------
+        // Fin practica --------------------------------------------------------------------------------|
 
         // Explicación soenre recibir variables desde etiquetas
         [TestCase("student", "Password123", true)]
@@ -81,6 +81,8 @@ namespace Proyecto_Auto
 
         // Se interactua con una Text Box y asserciones
         [Test]
+        // Se enzeña el uso de Retry
+        [Retry(2)] // Reintenta el test 2 veces en caso de fallo
         public void interactuarTxBox()
         {
             driver.Navigate().GoToUrl("https://demoqa.com/text-box");
