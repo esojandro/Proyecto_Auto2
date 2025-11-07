@@ -124,10 +124,15 @@ namespace Proyecto_Auto
                 Is.EqualTo("You have selected Banana"));
         }
 
-        [TearDown]
+        [TearDown] //**** Uso de copilot para solucionarlo!
         public void TearDown() 
-        { 
-            driver.Quit();
+        {
+            if (driver != null)
+            {
+                driver.Quit();
+                driver.Dispose();
+                driver = null;
+            }
         }
     }
 }
