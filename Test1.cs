@@ -40,6 +40,7 @@ namespace Proyecto_Auto
         //    Assert.That(driver.FindElement(By.CssSelector("p[id='permanentAddress']")).Text, Is.EqualTo("Permananet Address :Calle Verdadera 456"));
         //}
 
+
         //[Test]
         //public void interactuarCheckBox()
         //{
