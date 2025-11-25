@@ -11,7 +11,6 @@ namespace Proyecto_Auto.Page
         private By MsgLoginExitoso = By.CssSelector("p[class='has-text-align-center'] strong");
         private By MsgLoginErroneo = By.CssSelector("#error");
 
-
         public LoginPage(IWebDriver driver) : base(driver) {  }
 
         public void ingresarUsuario(string usuario)
